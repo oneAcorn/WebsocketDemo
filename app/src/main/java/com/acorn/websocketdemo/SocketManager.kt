@@ -12,6 +12,7 @@ class SocketManager private constructor() {
     private val client = OkHttpClient.Builder()
         .connectTimeout(30, TimeUnit.SECONDS) //连接超时
         .pingInterval(60L, TimeUnit.SECONDS) //心跳间隔
+        .retryOnConnectionFailure(true)
         .addInterceptor { chain ->
             var request = chain.request()
             logI("Interceptor 执行了? ${request.url()}")

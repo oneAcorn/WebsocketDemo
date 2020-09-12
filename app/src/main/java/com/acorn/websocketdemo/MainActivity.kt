@@ -1,5 +1,6 @@
 package com.acorn.websocketdemo
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
@@ -24,6 +25,9 @@ class MainActivity : AppCompatActivity() {
         closeBtn.setOnClickListener {
             //Code must be in range [1000,5000)
             SocketManager.instance.close(1003, "不玩了")
+        }
+        otherActivityBtn.setOnClickListener {
+            startActivity(Intent(this, SecondActivity::class.java))
         }
     }
 }

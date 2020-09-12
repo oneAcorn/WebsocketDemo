@@ -27,4 +27,11 @@
         android:layout_height="wrap_content"
         android:text="Close"
         android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/otherActivityBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Open other Activity"
+        android:textAllCaps="false" />
 </LinearLayout>

@@ -10,7 +10,13 @@ import java.util.concurrent.TimeUnit
  */
 class SocketManager private constructor() {
     private val client = OkHttpClient.Builder()
+        .connectTimeout(30, TimeUnit.SECONDS) //连接超时
         .pingInterval(60L, TimeUnit.SECONDS) //心跳间隔
+        .addInterceptor { chain ->
+            var request = chain.request()
+            logI("Interceptor 执行了? ${request.url()}")
+            chain.proceed(request)
+        }
         .build()
 
     companion object {
@@ -20,7 +26,11 @@ class SocketManager private constructor() {
     }
 
     private fun getSocket(): WebSocket {
-        val request = Request.Builder().url(url).build()
+        val request = Request.Builder()
+            .url(url)
+            .header("token", "mockToken")
+            .header("userId", "acorn")
+            .build()
         return client.newWebSocket(request, MySocketListener())
     }
 }

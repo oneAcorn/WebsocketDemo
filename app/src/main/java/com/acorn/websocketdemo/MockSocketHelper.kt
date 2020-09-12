@@ -23,7 +23,10 @@ class MockSocketHelper {
             override fun onOpen(webSocket: WebSocket, response: Response) {
                 super.onOpen(webSocket, response)
                 // 有客户端连接时回调
-                logI("onOpen:${Thread.currentThread()}")
+                logI(
+                    "onOpen thead:${Thread.currentThread()},userId:${response.header("userId")}" +
+                            ",token:${response.header("token")}"
+                )
             }
 
             override fun onMessage(webSocket: WebSocket, text: String) {

@@ -1,5 +1,6 @@
 package com.acorn.websocketdemo
 
+import com.acorn.websocketdemo.utils.logI
 import okhttp3.Response
 import okhttp3.WebSocket
 import okhttp3.WebSocketListener

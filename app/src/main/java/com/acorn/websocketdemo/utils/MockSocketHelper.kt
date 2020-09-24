@@ -1,5 +1,6 @@
-package com.acorn.websocketdemo
+package com.acorn.websocketdemo.utils
 
+import com.acorn.websocketdemo.utils.logI
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers

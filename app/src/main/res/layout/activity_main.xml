@@ -11,7 +11,14 @@
         android:id="@+id/connectBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Connect"
+        android:text="连接本地服务器"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/connectBtn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="连接外部服务器"
         android:textAllCaps="false" />
 
     <Button
@@ -25,7 +32,14 @@
         android:id="@+id/closeBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Close"
+        android:text="关闭本地服务器"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/closeBtn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="关闭外部服务器"
         android:textAllCaps="false" />
 
     <Button

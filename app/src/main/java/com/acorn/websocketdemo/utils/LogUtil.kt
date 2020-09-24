@@ -1,6 +1,7 @@
-package com.acorn.websocketdemo
+package com.acorn.websocketdemo.utils
 
 import android.util.Log
+import com.acorn.websocketdemo.BuildConfig
 
 /**
  * Created by acorn on 2020/5/3.

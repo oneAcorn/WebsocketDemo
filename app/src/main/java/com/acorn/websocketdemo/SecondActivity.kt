@@ -13,7 +13,7 @@ class SecondActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
         sendBtn.setOnClickListener {
-            SocketManager.instance.send("hi")
+            SocketManager.instance.socket.send("hi")
         }
     }
 }

@@ -1,51 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:fillViewport="true">
 
-    <Button
-        android:id="@+id/connectBtn"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="连接本地服务器"
-        android:textAllCaps="false" />
+        android:orientation="vertical"
+        tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/connectBtn2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="连接外部服务器"
-        android:textAllCaps="false" />
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="match_parent"
+            android:layout_height="300dp" />
 
-    <Button
-        android:id="@+id/sendBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="send"
-        android:textAllCaps="false" />
+        <Button
+            android:id="@+id/connectBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="连接本地服务器"
+            android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/closeBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="关闭本地服务器"
-        android:textAllCaps="false" />
+        <Button
+            android:id="@+id/connectBtn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="连接外部服务器"
+            android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/closeBtn2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="关闭外部服务器"
-        android:textAllCaps="false" />
+        <EditText
+            android:id="@+id/addrEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
-    <Button
-        android:id="@+id/otherActivityBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Open other Activity"
-        android:textAllCaps="false" />
-</LinearLayout>
+        <Button
+            android:id="@+id/connectBtn3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="连接指定服务器"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/sendBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="send"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/closeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="关闭本地服务器"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/closeBtn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="关闭外部服务器"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/otherActivityBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Open other Activity"
+            android:textAllCaps="false" />
+    </LinearLayout>
+</ScrollView>
